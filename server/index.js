@@ -35,6 +35,19 @@ app.post('/addUser', async (req, res)=>{
     })
 })
 
+app.get('/readUser', async (req, res)=>{
+      const {email} = req.query
+      const user = await User.findOne({
+        email: email
+      })
+
+    res.json({
+        success: true,
+        message: 'user read successfully',
+        data: user
+    })
+})
+
 app.listen(5000, ()=>{
     console.log('server started running on port 5000🤗')
 })
