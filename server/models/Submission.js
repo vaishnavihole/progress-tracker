@@ -1,6 +1,6 @@
 import mongoose from mongoose;
 
-const submissionSchema = mongoose.schema({
+const submissionSchema = mongoose.Schema({
     links: [String],
     taskId: Number,
     userId: Number,
@@ -11,7 +11,7 @@ const submissionSchema = mongoose.schema({
     timestamp: true,
 })
 
-const Submission = mongoose.Model("Submission", submissionSchema)
+const Submission = mongoose.model("Submission", submissionSchema)
 
 export default Submission;
 

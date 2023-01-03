@@ -10,14 +10,8 @@ const taskSchema = mongoose.Schema({
     timestamps:true
 })
 
-const Task = mongoose.Model("Task", submissionSchema)
+const Task = mongoose.model("Task", submissionSchema)
 
 export default Task;
 
-
-// taskNo
-// taskTitle
-// taskDescription
-// deadLine(DATE)
-// courseName
 
